@@ -26,4 +26,3 @@ jobs:
         run: |
           export APP_NAME=$(echo ${{ steps.meta.outputs.tags }} | cut -d ":" -f 2)
           echo $APP_NAME
-          curl --location --request DELETE "${{secrets.NOCOBASE_DEPLOY_HOST}}$APP_NAME"
